@@ -1,9 +1,10 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="io.tylerchesley.debugdrawer">
+<manifest
+    package="io.tylerchesley.debugdrawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
 
-    <application android:allowBackup="true"
-                 android:label="@string/app_name"
-                 android:icon="@drawable/ic_launcher"
+    <application
+        android:allowBackup="true"
         >
 
     </application>
