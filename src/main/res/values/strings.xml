@@ -1,3 +1,22 @@
 <resources>
 
+    <!-- ApplicationInfoSection -->
+    <string name="debug_application_info_section_debug_settings">Debug Settings</string>
+
+    <!-- DeviceInformationSection -->
+    <string name="debug_header_device_information">Device Information</string>
+    <string name="debug_device_make">Make</string>
+    <string name="debug_device_model">Model</string>
+    <string name="debug_device_resolution">Resolution</string>
+    <string name="debug_device_density">Density</string>
+    <string name="debug_device_release">Release</string>
+    <string name="debug_device_api_level">API</string>
+
+    <!-- BuildInformationSection -->
+    <string name="debug_header_build_information">Build Information</string>
+    <string name="debug_build_name">Name</string>
+    <string name="debug_build_code">Code</string>
+    <string name="debug_build_sha">SHA</string>
+    <string name="debug_build_date">Date</string>
+
 </resources>
