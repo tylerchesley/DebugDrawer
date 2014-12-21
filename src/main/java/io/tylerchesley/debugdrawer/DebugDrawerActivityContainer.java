@@ -9,32 +9,14 @@ import java.util.List;
 
 public class DebugDrawerActivityContainer implements ActivityContainer {
 
-
-//region Interfaces
-//-----------------------------------------------------------------------------
-
     public static interface Section {
 
         public View createView(Activity activity, LayoutInflater inflater, ViewGroup parent);
 
     }
 
-//-----------------------------------------------------------------------------
-//endregion
-
-
-//region Variables
-//-----------------------------------------------------------------------------
-
     private final int containerLayoutResource;
     private final List<Section> sections;
-
-//-----------------------------------------------------------------------------
-//endregion
-
-
-//region Constructors
-//-----------------------------------------------------------------------------
 
     public DebugDrawerActivityContainer(List<Section> sections) {
         this(R.layout.debug_default_activity_container, sections);
@@ -44,13 +26,6 @@ public class DebugDrawerActivityContainer implements ActivityContainer {
         this.containerLayoutResource = containerLayoutResource;
         this.sections = sections;
     }
-
-//-----------------------------------------------------------------------------
-//endregion
-
-
-//region Methods:ActivityContainer
-//-----------------------------------------------------------------------------
 
     @Override
     public void setContentView(Activity activity, int layoutResource) {
@@ -78,9 +53,5 @@ public class DebugDrawerActivityContainer implements ActivityContainer {
             drawerContainer.addView(view);
         }
     }
-
-//-----------------------------------------------------------------------------
-//endregion
-
 
 }

@@ -4,18 +4,7 @@ import android.app.Activity;
 
 public interface ActivityContainer {
 
-
-//region Methods
-//-----------------------------------------------------------------------------
-
     public void setContentView(Activity activity, int layoutResource);
-
-//-----------------------------------------------------------------------------
-//endregion
-
-
-//region Inner Classes
-//-----------------------------------------------------------------------------
 
     public static final class DefaultActivityContainer implements ActivityContainer {
 
@@ -25,9 +14,5 @@ public interface ActivityContainer {
         }
 
     }
-
-//-----------------------------------------------------------------------------
-//endregion
-
 
 }
