@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-public class DebugActivityContainer implements ActivityContainer {
+public class DebugDrawerActivityContainer implements ActivityContainer {
 
 
 //region Interfaces
@@ -36,11 +36,11 @@ public class DebugActivityContainer implements ActivityContainer {
 //region Constructors
 //-----------------------------------------------------------------------------
 
-    public DebugActivityContainer(List<Section> sections) {
+    public DebugDrawerActivityContainer(List<Section> sections) {
         this(R.layout.debug_default_activity_container, sections);
     }
 
-    public DebugActivityContainer(int containerLayoutResource, List<Section> sections) {
+    public DebugDrawerActivityContainer(int containerLayoutResource, List<Section> sections) {
         this.containerLayoutResource = containerLayoutResource;
         this.sections = sections;
     }

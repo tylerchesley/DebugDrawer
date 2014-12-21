@@ -7,10 +7,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import io.tylerchesley.debugdrawer.BuildConfig;
-import io.tylerchesley.debugdrawer.DebugActivityContainer;
+import io.tylerchesley.debugdrawer.DebugDrawerActivityContainer;
 import io.tylerchesley.debugdrawer.R;
 
-public class BuildInformationSection implements DebugActivityContainer.Section {
+public class BuildInformationSection implements DebugDrawerActivityContainer.Section {
 
     private final String sha;
     private final String buildDate;

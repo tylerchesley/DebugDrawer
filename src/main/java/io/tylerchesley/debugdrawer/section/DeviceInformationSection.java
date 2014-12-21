@@ -8,10 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import io.tylerchesley.debugdrawer.DebugActivityContainer;
+import io.tylerchesley.debugdrawer.DebugDrawerActivityContainer;
 import io.tylerchesley.debugdrawer.R;
 
-public class DeviceInformationSection implements DebugActivityContainer.Section {
+public class DeviceInformationSection implements DebugDrawerActivityContainer.Section {
 
     private static String getDensityString(DisplayMetrics displayMetrics) {
         switch (displayMetrics.densityDpi) {

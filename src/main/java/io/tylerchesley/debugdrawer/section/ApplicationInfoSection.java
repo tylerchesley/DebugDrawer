@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import io.tylerchesley.debugdrawer.DebugActivityContainer;
+import io.tylerchesley.debugdrawer.DebugDrawerActivityContainer;
 import io.tylerchesley.debugdrawer.R;
 
-public class ApplicationInfoSection implements DebugActivityContainer.Section {
+public class ApplicationInfoSection implements DebugDrawerActivityContainer.Section {
 
     @Override
     public View createView(Activity activity, LayoutInflater inflater, ViewGroup parent) {
