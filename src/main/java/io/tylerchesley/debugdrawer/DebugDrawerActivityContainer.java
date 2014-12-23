@@ -1,30 +1,26 @@
 package io.tylerchesley.debugdrawer;
 
 import android.app.Activity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.List;
+import io.tylerchesley.debugdrawer.widget.DividerItemDecoration;
 
 public class DebugDrawerActivityContainer implements ActivityContainer {
 
-    public static interface Section {
-
-        public View createView(Activity activity, LayoutInflater inflater, ViewGroup parent);
-
-    }
-
     private final int containerLayoutResource;
-    private final List<Section> sections;
+    private final RecyclerView.Adapter adapter;
 
-    public DebugDrawerActivityContainer(List<Section> sections) {
-        this(R.layout.debug_default_activity_container, sections);
+    public DebugDrawerActivityContainer(RecyclerView.Adapter adapter) {
+        this(R.layout.debug_default_activity_container, adapter);
     }
 
-    public DebugDrawerActivityContainer(int containerLayoutResource, List<Section> sections) {
+    public DebugDrawerActivityContainer(int containerLayoutResource,
+                                        RecyclerView.Adapter adapter) {
         this.containerLayoutResource = containerLayoutResource;
-        this.sections = sections;
+        this.adapter = adapter;
     }
 
     @Override
@@ -40,18 +36,18 @@ public class DebugDrawerActivityContainer implements ActivityContainer {
 
         LayoutInflater.from(activity).inflate(layoutResource, contentContainer);
 
-        final ViewGroup drawerContainer = (ViewGroup) activity
+        final RecyclerView drawerContainer = (RecyclerView) activity
                 .findViewById(R.id.debug_drawer_container);
         if (drawerContainer == null) {
             throw new NullPointerException("No container with id of 'debug_drawer_container' "
                     + "found.");
         }
 
-        final LayoutInflater inflater = activity.getLayoutInflater();
-        for (Section section : sections) {
-            final View view = section.createView(activity, inflater, drawerContainer);
-            drawerContainer.addView(view);
-        }
+        drawerContainer.setHasFixedSize(true);
+        drawerContainer.setLayoutManager(new LinearLayoutManager(activity));
+        drawerContainer.addItemDecoration(new DividerItemDecoration(activity,
+                DividerItemDecoration.VERTICAL_LIST));
+        drawerContainer.setAdapter(adapter);
     }
 
 }
