@@ -27,7 +27,7 @@
     <string name="debug_header_build_information">Build Information</string>
     <string name="debug_build_version_name">Version Name</string>
     <string name="debug_build_version_code">Version Code</string>
-    <string name="debug_build_sha">SHA</string>
-    <string name="debug_build_date">Date</string>
+    <string name="debug_build_commit">Latest Commit #</string>
+    <string name="debug_build_time">Build Time</string>
 
 </resources>

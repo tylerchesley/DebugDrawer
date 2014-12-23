@@ -26,6 +26,16 @@ public class BuildInfoSectionBuilder extends SectionBuilder {
         return this;
     }
 
+    public BuildInfoSectionBuilder addBuildTime(String date) {
+        add(R.string.debug_build_time, date);
+        return this;
+    }
+
+    public BuildInfoSectionBuilder addCommit(String commit) {
+        add(R.string.debug_build_commit, commit);
+        return this;
+    }
+
     public BuildInfoSectionBuilder addDefaults() {
         return addVersionName()
                 .addVersionCode();
@@ -36,7 +46,7 @@ public class BuildInfoSectionBuilder extends SectionBuilder {
         if (children.size() == 0) {
             addDefaults();
         }
-        
+
         return super.build();
     }
 
