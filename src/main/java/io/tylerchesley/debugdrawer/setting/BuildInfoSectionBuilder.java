@@ -14,7 +14,6 @@ public class BuildInfoSectionBuilder extends SectionBuilder {
     public BuildInfoSectionBuilder(Context context) {
         super(context);
         title(R.string.debug_header_build_information);
-        addDefaults();
     }
 
     public BuildInfoSectionBuilder addVersionName() {
@@ -30,6 +29,15 @@ public class BuildInfoSectionBuilder extends SectionBuilder {
     public BuildInfoSectionBuilder addDefaults() {
         return addVersionName()
                 .addVersionCode();
+    }
+
+    @Override
+    public Section build() {
+        if (children.size() == 0) {
+            addDefaults();
+        }
+        
+        return super.build();
     }
 
 }
