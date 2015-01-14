@@ -3,25 +3,17 @@ package io.tylerchesley.debugdrawer.setting;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.tylerchesley.debugdrawer.R;
-import io.tylerchesley.debugdrawer.widget.Renderable;
-
 public class Section extends Setting implements HasChildren {
 
-    private final List<Renderable> children;
+    private final List<Setting> children;
 
     public Section(String title) {
-        this(title, new ArrayList<Renderable>());
+        this(title, new ArrayList<Setting>());
     }
 
-    public Section(String title, List<Renderable> children) {
+    public Section(String title, List<Setting> children) {
         super(title);
         this.children = children;
-    }
-
-    @Override
-    public int getType() {
-        return R.id.debug_drawer_type_section;
     }
 
     @Override
@@ -30,7 +22,7 @@ public class Section extends Setting implements HasChildren {
     }
 
     @Override
-    public Renderable getChild(int position) {
+    public Setting getChild(int position) {
         return children.get(position);
     }
 

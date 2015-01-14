@@ -1,8 +1,6 @@
 package io.tylerchesley.debugdrawer.setting;
 
-import io.tylerchesley.debugdrawer.widget.Renderable;
-
-public abstract class Setting implements Renderable {
+public abstract class Setting {
 
     private final String title;
 

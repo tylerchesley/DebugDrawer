@@ -35,11 +35,6 @@ public class ApplicationHeader extends Setting {
         this.icon = icon;
     }
 
-    @Override
-    public int getType() {
-        return R.id.debug_drawer_type_application_header;
-    }
-
     public Drawable getIcon() {
         return icon;
     }

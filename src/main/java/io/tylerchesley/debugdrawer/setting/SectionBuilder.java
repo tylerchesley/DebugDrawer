@@ -5,8 +5,6 @@ import android.content.Context;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.tylerchesley.debugdrawer.widget.Renderable;
-
 public class SectionBuilder {
 
     public static SectionBuilder from(Context context) {
@@ -14,7 +12,7 @@ public class SectionBuilder {
     }
 
     protected final Context context;
-    protected final List<Renderable> children;
+    protected final List<Setting> children;
     protected String title;
 
     public SectionBuilder(Context context) {
@@ -42,7 +40,7 @@ public class SectionBuilder {
         return this;
     }
 
-    public SectionBuilder add(Renderable child) {
+    public SectionBuilder add(Setting child) {
         children.add(child);
         return this;
     }
